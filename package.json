@@ -9,9 +9,9 @@
     "url": "https://github.com/Obiajulu-gif/Prompt-Hash-Stellar"
   },
   "scripts": {
-    "dev": "node scripts/check-local-setup.mjs --warn-only && vite",
-    "start": "vite",
-    "build": "vite build",
+    "dev": "node init && node scripts/check-local-setup.mjs --warn-only && vite",
+    "start": "node init && vite",
+    "build": "node init && vite build",
     "prebuild": "node scripts/check-local-setup.mjs --warn-only",
     "typecheck": "tsc -b",
     "test": "vitest run",
@@ -46,7 +46,7 @@
     "ops:rollback": "npx tsx scripts/ci-rollback.ts",
     "inspect:contract": "npx tsx scripts/inspect-contract.ts",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "node init && storybook build"
   },
   "dependencies": {
     "@creit.tech/stellar-wallets-kit": "^1.9.5",
